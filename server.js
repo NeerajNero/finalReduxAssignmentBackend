@@ -9,7 +9,8 @@ const {Teachers} = require('./models/teachers.models');
 initializeDatabase();
 
 app.use(cors({
-  origin: "*"
+  origin: "*",
+  methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
 }));
 app.use(express.json());
 
